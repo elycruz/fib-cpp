@@ -36,9 +36,10 @@ FString fibVectorToString (int32Vector vector, FString delim) {
 int32 main(int32 argc, char *argv[]) {
     int32 limit = argc >= 2 ? std::stoi(argv[1]) : 7000;
     if (argc < 2) {
-        std::cout << "USAGE: `$ fib ${NUMBER}` where `${NUMBER}` is whatever 32-BIT positive number " <<
-                             "you would like to enter." << std::endl;
-        std::cout << "Showing Fibonacci numbers up to default limit `7000`." << std::endl;
+        std::cout << "USAGE: `$ fib ${NUMBER}` where `${NUMBER}` is whatever 32-BIT positive integer " <<
+                             "you would like to use." << std::endl;
+
+        std::cout << "\nShowing Fibonacci numbers up to default limit `7000`\n." << std::endl;
     }
     std::cout << fibVectorToString(fibVector(limit), " ") <<  std::endl;
     return 0;
